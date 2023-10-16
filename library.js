@@ -28,11 +28,21 @@ function getWordIndex(library, word){
   for(i in library){
     if(library[i] == word){
       return(i);
-    }
+    }  
     else{
      continue; 
     }
+  console.log("Index not found for getWordIndex " + word + " it may not be in the library you inputted");
+  return(0);
   }
 }
 
-//
+//Changes the case based on the library's data
+function sameCase(library){
+  
+  for(i in library){
+    if(library[i] == library[i].toLowerCase()){
+      
+    }
+  }  
+}
