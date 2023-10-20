@@ -39,10 +39,32 @@ function getWordIndex(library, word){
 
 //Changes the case based on the library's data
 function sameCase(library){
-  
+  let lower = 0;
+  let upper = 0;
   for(i in library){
     if(library[i] == library[i].toLowerCase()){
-      
+      lower++;
+      continue;
     }
-  }  
+    if(library[i] == library[i].toUpperCase()){
+      upper++;
+      continue;
+    }
+  }
+
+  if(lower >= upper){
+    for(i in library){
+      library[i] = library[i].toLowerCase();
+      continue;
+    }
+    return;
+  }
+
+  if(upper > lower){
+    for(i in library){
+      library[i] = library[i].toUpperCase();
+      continue;
+    }
+    return;
+  }
 }
